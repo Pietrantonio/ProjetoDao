@@ -24,6 +24,9 @@ public class App {
         Pessoa pedro = new Pessoa("Pedro", "Lima", 25);
         // Dao dao = new PessoaDaoArrayList();
         Dao dao = new PessoaDaoDerby();
+        dao.adicionar(jose);
+        dao.listarTudo();
+       // dao.remover(jose);
 //        dao.adicionar(joao);
 //        dao.adicionar(jose);
 //        dao.adicionar(pedro);
