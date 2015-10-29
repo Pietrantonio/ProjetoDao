@@ -39,7 +39,7 @@ public class PessoaDaoDerby implements Dao {
 
     @Override
     public void adicionar(Pessoa p) {
-        String instrucao = "INSERT INTO PESSOA (NOME, SOBRENOME, IDADE) VALUES (" + "'" + p.getNome() + "', " + "'" + p.getSobrenome() + "', " + p.getIdade() + ")";
+        String instrucao = "INSERT INTO PESSOA (CODIGO, NOME, SOBRENOME, IDADE) VALUES ("  + p.getCodigo() + ", " + "'" + p.getNome() + "', " + "'" + p.getSobrenome() + "', " + p.getIdade() + ")";
 
         System.out.println(instrucao);
         try {
@@ -51,7 +51,7 @@ public class PessoaDaoDerby implements Dao {
 
     @Override
     public void remover(Pessoa p) {
-        String instrucao = "DELETE FROM PESSOA WHERE NOME = 'Jose' ";
+        String instrucao = "DELETE FROM PESSOA WHERE CODIGO = 1 ";
         System.out.println(instrucao);
         try {
             stmt.executeUpdate(instrucao);
@@ -70,7 +70,7 @@ public class PessoaDaoDerby implements Dao {
            //rz armazena os dados
            //o nome usando entre aspas la no final é o mesmo nome do campo la na tabela, ao executar o sql, ele traz os nomes la do banco
            while(rs.next()){
-               System.out.println("Nome: " + rs.getString("NOME") + "Sobrenome: " + rs.getString("SOBRENOME") + "idade: " + rs.getString("IDADE"));
+               System.out.println("Codigo: " + rs.getString("CODIGO") + "Nome: " + rs.getString("NOME") + "Sobrenome: " + rs.getString("SOBRENOME") + "idade: " + rs.getString("IDADE"));
         }
         } catch (SQLException se) {
             System.out.println("Mensagem do erro: " + se.getMessage());

@@ -18,10 +18,10 @@ import br.edu.utfpr.modelo.Pessoa;
 public class App {
     //psvm tab
     public static void main(String[] args) {
-        System.out.println("Vamos adicionar");
-        Pessoa joao = new Pessoa("Joao", "Silva", 20);
-        Pessoa jose = new Pessoa("Jose", "Henrique", 19);
-        Pessoa pedro = new Pessoa("Pedro", "Lima", 25);
+       // System.out.println("Vamos adicionar");
+        Pessoa joao = new Pessoa(1, "Joao", "Silva", 20);
+        Pessoa jose = new Pessoa(2, "Jose", "Henrique", 19);
+        Pessoa pedro = new Pessoa(3, "Pedro", "Lima", 25);
         // Dao dao = new PessoaDaoArrayList();
         Dao dao = new PessoaDaoDerby();
         dao.adicionar(jose);

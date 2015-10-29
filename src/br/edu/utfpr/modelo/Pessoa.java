@@ -10,16 +10,22 @@ package br.edu.utfpr.modelo;
  * @author UTFPR
  */
 public class Pessoa {
+    private int codigo;
     private String nome;
     private String sobrenome;
     private int idade;
 
-    public Pessoa(String nome, String sobrenome, int idade) {
+    public Pessoa(int codigo, String nome, String sobrenome, int idade) {
+        this.codigo = codigo;
         this.nome = nome;
         this.sobrenome = sobrenome;
         this.idade = idade;
     }
 
+    public int getCodigo() {
+        return codigo;
+    }
+    
     public String getNome() {
         return nome;
     }
@@ -34,7 +40,7 @@ public class Pessoa {
 
     @Override
     public String toString() {
-        return "Pessoa{" + "nome=" + nome + ", sobrenome=" + sobrenome + ", idade=" + idade + '}';
+        return "Pessoa{" + "codigo=" + codigo + ", " + "nome=" + nome + ", sobrenome=" + sobrenome + ", idade=" + idade + '}';
     }
     
     
